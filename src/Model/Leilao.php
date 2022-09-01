@@ -26,11 +26,7 @@ class Leilao
      */
     public function recebeLance(Lance $lance)
     {
-        if (empty($this->lances)) {
-            // TODO: lançar exceção.
-        }
-
-        if ($this->ehDoUltimoUsuario($lance)) {
+        if (!empty($this->lances) && $this->ehDoUltimoUsuario($lance)) {
             throw new LeilaoException('Usuário não pode realizar lances consecutivos.');
         }
 
