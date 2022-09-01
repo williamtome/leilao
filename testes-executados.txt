@@ -1,3 +1,7 @@
+Lance (Alura\Leilao\Tests\Models\Lance)
+ [x] Lancar excessao se lance eh feito com valor zero
+ [x] Lancar excessao se lance eh feito com valores negativos
+
 Leilao (Alura\Leilao\Tests\Models\Leilao)
  [x] Leilao nao deve aceitar mais de 5 lances repetidos por usuario
  [x] Leilao nao deve receber lances repetidos
