@@ -31,11 +31,7 @@ class Avaliador
             }
         }
 
-        $lances = $leilao->getLances();
-
-        usort($lances, function ($lance1, $lance2) {
-            return $lance2->getValor() - $lance1->getValor();
-        });
+        $lances = $this->ordenaLances($leilao->getLances());
 
         $this->maioresLances = array_slice($lances, 0, 3);
     }
@@ -59,5 +55,18 @@ class Avaliador
     public function getMaioresLances(): array
     {
         return $this->maioresLances;
+    }
+
+    /**
+     * @param array $lances
+     * @return array
+     */
+    protected function ordenaLances(array $lances): array
+    {
+        usort($lances, function ($lance1, $lance2) {
+            return $lance2->getValor() - $lance1->getValor();
+        });
+
+        return $lances;
     }
 }
