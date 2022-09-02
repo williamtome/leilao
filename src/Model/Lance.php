@@ -4,7 +4,7 @@ namespace Alura\Leilao\Model;
 
 use Alura\Leilao\Exceptions\LanceException;
 
-class  Lance
+class Lance
 {
     /** @var Usuario */
     private $usuario;
